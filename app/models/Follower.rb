@@ -1,6 +1,6 @@
 
 class Follower
-attr_accessor :cults
+attr_accessor #:cults
 attr_reader :name, :age, :life_motto
 
   @@all = []
@@ -9,13 +9,13 @@ attr_reader :name, :age, :life_motto
     @name = name
     @age = age
     @life_motto = life_motto
-    @cults = []
+    #@cults = []
     @@all << self
   end
 
   def join_cult(cult, initiation_date)
     BloodOath.new(cult, self, initiation_date)
-    self.cults << cult
+    #self.cults << cult
   end
 
   def self.all
